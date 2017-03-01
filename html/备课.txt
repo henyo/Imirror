@@ -1,0 +1,61 @@
+1, pc项目再次巩固
+2，这种类型的网站怎么排版是正确
+3，下拉滚动JS响应
+       用插件
+       用手写JQ简单模拟
+小屏幕1366*768
+offset()获取元素的位置
+
+阐述
+1，jquery的早期版兼容还是不错的，包括现在的版本
+
+psd转html p2h.cn
+
+早期的bootstrap
+
+
+原生JS的
+原生JS写
+都去造轮子了
+
+jq学起来非常容易
+
+w3cshool.com.cn
+
+
+我们的主张
+我们不刻意的去兼容ie6，ie7，ie8，这些浏览器垃圾就是垃圾，但是呢，也要保证基本的兼容性吧，见鬼去吧
+
+
+客户的要求兼容电脑小屏幕
+    （1366x768）笔记本的分辨率
+
+
+
+$(".box").waypoint(function(){
+			$(this).addClass('animated');
+		}, { triggerOnce: true, offset: "95%" });
+
+
+$(window).bind("scroll",function(){ 
+			
+			var top=$(window).scrollTop();
+			var thisOffsetTop =$('.box').offset().top;	
+			
+			console.log(top + '----' + thisOffsetTop);
+		
+		});
+
+
+
+ //sample:扩展jquery对象的方法，bold()用于加粗字体。
+        (function ($) {
+            $.fn.extend({
+                "bold": function () {
+                    ///<summary>
+                    /// 加粗字体
+                    ///</summary>
+                    return this.css({ fontWeight: "bold" });
+                }
+            });
+        })(jQuery);

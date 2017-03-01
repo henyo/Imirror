@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1081px) {
+	/*360,480,640,750,780,860,960*/
+	.wrapper{
+		width: 780px;
+	}
+}
+@media only screen and (max-width:781px ) {
+	.wrapper{
+		width: auto;
+		 
+	}
+}
+
+
