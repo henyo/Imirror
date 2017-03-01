@@ -1,0 +1,223 @@
+
+
+body:after{
+	width: 50px;height: 50px;border-radius: 50px;background: gray;
+	position: absolute;top: 10%;right: 50px;content: "";
+}
+.gh{
+	display: none;
+}
+@media only screen and (max-width: 1081px) {
+	/*360,480,640,750,780,860,960*/
+	
+	img{
+	max-width: 100%;
+	}
+	body:after{
+		background: indianred;
+	}
+	.wrapper{
+		width: 780px;
+	}
+	.header .logo{
+		margin-left: 0;
+	}
+	.header .nav{
+		margin-left: 20px;
+	}
+	.page1{
+		height: auto;
+	}
+	.page1 img{
+	position: static;margin-left: 0;
+	}
+	.page2{
+		padding-top: 20px;
+	}
+
+	.page2 .nav li a{
+		font-size: 18px;height: 30px;line-height: 30px;
+		background-size: 30px;padding-right: 35px;
+	}
+	.page2 .ico{
+		margin-top: 20px;
+	}
+	.gb-img{
+		width: auto;position: static;
+	}
+	.gb-txt h2{
+		font-size: 32px;
+	}
+	.gb-txt p{
+		font-size: 24px;line-height: 1.7;margin-top: 15px;
+	}
+	.page2 .txt{
+		padding-bottom: 20px;
+	}
+	.gb-txt h3 a{
+		font-size: 32px;
+	}
+	
+	
+	
+	.page4 .img{
+		right: -100px;top: -25px;width: 380px;
+	}
+	.page6 .txt h2{
+		padding-left: 0;text-indent: 40px;
+	}
+	.page7 .txt h4{
+		font-size: 30px;margin-top: 20px;
+	}
+	.page9{
+		padding-top: 50px;padding-bottom: 50px;
+	}
+	.page6 .img{
+		left: -130px;width: 400px;
+	}
+	.page10{
+		padding-top: 60px;padding-bottom: 60px;
+	}
+	.page10 .gb-img{
+		font-size: 120px;padding: 50px 0;
+	}
+	
+	
+}
+
+
+
+
+@media only screen and (max-width:781px ) {
+	
+	/*手机下的响应式,无非就是左右布局变为上下布局,浮动变为不浮动*/
+	.gh{
+		display: block;
+	}
+	body:after{
+		background: cornflowerblue;
+	}
+	.wrapper{ 
+		width: auto;
+		/* auto是因为手机屏分辨不固定*/
+	}
+	.header{
+		height: auto;position: relative;
+	}
+	.header .logo{
+		float: left;margin-left: 20px;
+	}
+	.header .nav{
+		text-align: center;overflow: hidden;height: 0;
+		margin-left: 0;position: absolute;left: 0;right: 0;top: 32px;
+		transition: all 0.5s;
+	}
+	.header.selected .nav{
+	display: block;height: 300px;background: #333333;
+}
+	.header .nav ul{
+		padding: 20px;
+	}
+	.header .nav li{
+		float: none;display: block;margin-right: 0;
+		background: #333333;border-bottom: 1px solid #c3c3c3;
+		transform: translate3d(-30px,-30px,0);
+		transition: all 0.5s;
+		opacity: 0;
+	}
+	.header.selected .nav li{
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+	.header .nav li:nth-child(1){
+		
+	}
+	.header .nav li:nth-child(2){
+		transition-delay: 0.1s;
+	}
+		.header .nav li:nth-child(3){
+		transition-delay: 0.2s;
+	}
+		.header .nav li:nth-child(4){
+		transition-delay: 0.3s;
+	}
+			.header .nav li:nth-child(5){
+		transition-delay: 0.4s;
+	}
+	.header .srch{
+		position: absolute;top: 0;right: 0;
+	}
+
+	.header .gh{
+	float: left;margin-left: 15px;height: 32px;width: 30px;
+	}
+	.header .gh a{
+		 display: block;width: 30px;height: 2px;background:#FFFFFF ;
+		 position: relative;top: 15px; 
+		 
+		
+	}
+	.header .gh a:before{
+		 display: block;width: 30px;height: 2px;background:#FFFFFF ;
+		 position: absolute;top: 5px;content: ""; 
+		 transition: all 0.4s;
+		 transform: rotate(0);
+	}
+	.header .gh a:after{
+		 display: block;width: 30px;height: 2px;background:#FFFFFF ;content: "";
+		 position: absolute;bottom: 6px;/*伪类属于CSS3，可减少HTML标签*/
+		transition: all 0.4s;
+		 transform: rotate(0);
+	}
+	/*叉叉的样式*/
+
+	.header.selected .gh a{
+		background: transparent;
+	}
+	.header.selected .gh a:after{
+		top: 0;
+		transform: rotate(-45deg);
+		transition: all 0.4s;
+	}
+	.header.selected .gh a:before{
+		top: 0;
+		transform: rotate(45deg);
+		transition: all 0.4s;
+	}
+	.page2 .nav li{
+		float: none;display: block;margin-bottom: 5px;text-align: center;
+	}
+	.page2 .nav li.fr{
+		float: none; 
+	}
+	.gb-img{
+		width: 70%;margin: 0 auto;
+	}
+	
+	.page6 .img{
+		left: 0;width: 280px;
+	}
+	.gb-txt{
+		padding: 0 20px;
+	}
+	.page4{
+		padding-top: 20px;
+	}
+	.page4 .img{
+		display: block;position: static;width: 70%;margin: 0 auto;
+	}
+	.page4 .txt{
+		margin-right: 0;text-align: center;
+	}
+	.page6{
+		padding-top: 20px;
+	}
+	.page6 .img{
+		position: static;display: block;width: 70%;margin: 0 auto;
+	}
+	.page6 .txt{
+		margin-left: 0;text-align: center;
+	}
+	
+	
+}
